@@ -1,0 +1,304 @@
+{% load static %}  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'jq/jquery.min.css' %}">
+    <link rel="stylesheet" href="{% static 'fa/bootstrap-social.css' %}">
+    <link rel="stylesheet" href="{% static 'fa/fontawesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'fa/fontawesome.css' %}">
+    <link rel = "icon" href ="{% static 'img/logo.jpg' %}" type = "image/x-icon">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Tail wind css -->
+    <style>
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
+    <title>Pesticides</title>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'index' %}">
+                <img src="{% static 'img/logo.jpg' %}" style="display: inline-block;" height="30px" width="35px">Farmer Webservices
+            </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'index' %}"><span class="fa fa-home fa-lg"></span> Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'crops' %}"><span class="fa fa-leaf fa-lg"></span> Crops</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'pestisides' %}"><span class="fa fa-bug fa-lg"></span> Pesticides</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'about' %}"><span class="fa fa-info-circle fa-lg"></span> About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'contact' %}"><span class="fa fa-id-card fa-lg"></span> Contact</a>
+            </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'signup' %}"><span class="fa fa-sign-in-alt fa-lg"></span> Sign Up</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'login' %}"><span class="fa fa-user-plus fa-lg"></span> Login</a>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+  
+    <div class="container">
+      <div class="jumbotron h-50">
+        <h1 class="display-4">Pesticides</h1>
+        <!-- <p class="lead"></p> -->
+        <hr class="my-4">
+        <p>A pesticide is a chemical substance or a mixture of substances used to destroy, control or repel pests. Pests are the type of organisms that destroy plant growth or ruit the plant by eating it. A wide variety of pests can destroy the agricultural crops and result in severe financial losss. Some examples of pests are insects, rodents, fungi, slugs and snails, bird mites, and weeds.</p>
+      </div>  
+    </div>
+    <div class="container center-block">
+      <img src="{% static 'img/pest.png' %}" alt="pestisides" width="700px" height="500px">
+    </div>
+    <!-- Accordion -->
+    <div class="container">
+      <div id="accordion" class="accordion">
+          <div class="card mb-0">
+              <div class="card-header collapsed" data-toggle="collapse" href="#collapseOne">
+                  <a class="card-title">
+                      Green Leaf Manures
+                  </a>
+              </div>
+              <div id="collapseOne" class="card-body collapse" data-parent="#accordion" >
+                  <p>Green leaf manures (GLMs) are organic manures made from leaves collected from all available sources and used to supply essential plant nutrients to the soil and increase soil fertility in a healthy manner.
+                  </p>
+              </div>
+              <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                  <a class="card-title">
+                    Crop Rotation
+                  </a>
+              </div>
+              <div id="collapseTwo" class="card-body collapse" data-parent="#accordion" >
+                  <p>Crop rotation is the practice of growing a series of different types of crops in the same area across a sequence of growing seasons. It reduces reliance on one set of nutrients, pest and weed pressure, and the probability of developing resistant pest and weeds.
+                  </p>
+              </div>
+              <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                  <a class="card-title">
+                    Biological Management
+                  </a>
+              </div>
+              <div id="collapseThree" class="collapse" data-parent="#accordion" >
+                  <div class="card-body">Biological control or biocontrol is a method of controlling pests such as insects, mites, weeds and plant diseases using other organisms. It relies on predation, parasitism, herbivory, or other natural mechanisms, but typically also involves an active human management role.
+                  </div>
+              </div>
+              <div class="card-header collapsed" data-toggle="collapse" href="#collapseFour">
+                <a class="card-title">
+                  Animal husbandry
+                </a>
+              </div>
+              <div id="collapseFour" class="card-body collapse" data-parent="#accordion" >
+                <p>Animal husbandry is the branch of agriculture concerned with animals that are raised for meat, fibre, milk, eggs, or other products. It includes day-to-day care, selective breeding and the raising of livestock.
+                </p>
+              </div>
+              <div class="card-header collapsed" data-toggle="collapse" href="#collapseFive">
+                <a class="card-title">
+                  Bio-Fertilizers
+                </a>
+              </div>
+              <div id="collapseFive" class="card-body collapse" data-parent="#accordion" >
+                <p>A biofertilizer (also bio-fertilizer) is a substance which contains living micro-organisms which, when applied to seeds, plant surfaces, or soil, colonize the rhizosphere or the interior of the plant and promotes growth by increasing the supply or availability of primary nutrients to the host plant.
+                </p>
+              </div>
+              <div class="card-header collapsed" data-toggle="collapse" href="#collapseSix">
+                <a class="card-title">
+                  Manures
+                </a>
+              </div>
+              <div id="collapseSix" class="card-body collapse" data-parent="#accordion" >
+                <p>Manure is organic matter that is used as organic fertilizer in agriculture. Most manure consists of animal feces; other sources include compost and green manure. 
+                </p>
+              </div>
+              <div class="card-header collapsed" data-toggle="collapse" href="#collapseSeven">
+                <a class="card-title">
+                  VermiCompost
+                </a>
+              </div>
+              <div id="collapseSeven" class="card-body collapse" data-parent="#accordion" >
+                <p>Vermicompost is the product of the decomposition process using various species of worms, usually red wigglers, white worms, and other earthworms, to create a mixture of decomposing vegetable or food waste, bedding materials, and vermicast.
+                </p>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="container">
+    <div class="jumbotron h-50">
+      <h1 class="display-4">Inorganic Pesticides</h1>
+      <!-- <p class="lead"></p> -->
+      <hr class="my-4">
+      <p>Pesticides in this group, for example borates, silicates and sulfur, are minerals that are mined from the earth and ground into a fine powder. Some work as poisons and some work by physically interfering with the pest. Older "inorganics" included such highly toxic compounds as arsenic, copper, lead and tin salts. Current inorganic pesticides are relatively low in toxicity and have low environmental impact. Borate insecticides, such as Bora Care and Timbor have many uses in structural pest management and are very safe compared to older conventional pesticides.</p>
+    </div>  
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <img src="{% static 'img/pest1.jpg' %}" alt="">
+      </div>
+      <div class="col-md-4">
+        <img src="{% static 'img/pest5.jpg' %}" alt="">
+      </div>
+      <div class="col-md-4">
+        <img src="{% static 'img/pest3.jpg' %}" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <h3>SEASONAL PESTICIDE USE</h3>
+    <li><b>AUTUMN</b></li>
+      <ol><b><i> Herbicides </i></b> :  or weedkillers (e.g. paraquat, glyphosate and propanil).</ol>
+    <li><b>WINTER</b></li>
+      <ol><b><i> Fungicides </i></b> : (to kill mould or fungi) :- when applied to wood, they are called wood
+    preservatives </ol>
+    <ol><b><i> Insecticides </i></b>:(for killing insects) such as organochlorines, organophosphates and
+    carbamates. This category also includes insect repellents such as diethyltoluamide (DEET)
+    and citronella (of natural origin). </ol>
+    <li><b>SPRING</b></li>
+    <ol><b><i>Fungicides</i></b> :(to kill mould or fungi) </ol>
+    <ol><b><i>Insecticides </i></b>: (for killing insects) </ol>
+    <li><b>SUMMER</b></li>
+    <ol><b><i>Insecticides </i></b>: (for killing insects)</ol>
+  </div>
+  
+    <!-- Footer Section -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="footer-cta pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="cta-text">
+                                <h4>Find us</h4>
+                                <span>AB1,IIIT Rkvalley Kadapa</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fas fa-phone"></i>
+                            <div class="cta-text">
+                                <h4>Call us</h4>
+                                <span>9876543210 0</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="far fa-envelope-open"></i>
+                            <div class="cta-text">
+                                <h4>Mail us</h4>
+                                <span>ffws@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-content pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-logo">
+                                <a href="index.html"><img src="{% static 'img/logo.jpg' %}" class="img-fluid" alt="logo"></a>
+                            </div>
+                            <div class="footer-text">
+                                <p>You wanna learn more about farming or you need any suggestion regarding farming let's join with us...It is a platform where you can find all the information and suggestion about farming</p>
+                            </div>
+                            <div class="footer-social-icon">
+                                <span>Follow us</span>
+                                <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                                <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+                                <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Useful Links</h3>
+                            </div>
+                            <ul>
+                                <li><a href="{% url 'index' %}">Home</a></li>
+                                <li><a href="{% url 'about' %}">about</a></li>
+                                <li><a href="{% url 'crops' %}">crops</a></li>
+                                <li><a href="{% url 'pestisides' %}">pesticides</a></li>
+                                <li><a href="{% url 'contact' %}">Contact</a></li>
+                                <li><a href="{% url 'about' %}">About us</a></li>
+                                <li><a href="#">Latest News</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Subscribe</h3>
+                            </div>
+                            <div class="footer-text mb-25">
+                                <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                            </div>
+                            <div class="subscribe-form">
+                                <form action="#">
+                                    <input type="text" placeholder="Email Address">
+                                    <button><i class="fab fa-telegram-plane"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                        <div class="copyright-text">
+                            <p>Copyright &copy; 2021, All Right Reserved <a href="#">@FFWS</a></p>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                        <div class="footer-menu">
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Terms</a></li>
+                                <li><a href="#">Privacy</a></li>
+                                <li><a href="#">Policy</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+<!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+<script src="{% static 'jq/jquery.slim.min.js' %}"></script>
+<script src="{% static 'jq/popper.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.js' %}"></script>
+<script src="https://kit.fontawesome.com/99334bea18.js" crossorigin="anonymous"></script>
+<script src="{% static 'fa/fontawesome.js' %}"></script>
+<script src="{% static 'fa/fontawesome.min.js' %}"></script>
+</body>
+</html>

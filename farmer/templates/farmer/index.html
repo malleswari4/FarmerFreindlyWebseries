@@ -1,0 +1,269 @@
+{% load static %}  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'jq/jquery.min.css' %}">
+    <link rel="stylesheet" href="{% static 'fa/bootstrap-social.css' %}">
+    <link rel="stylesheet" href="{% static 'fa/fontawesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'fa/fontawesome.css' %}">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel = "icon" href ="{% static 'img/logo.jpg' %}" type = "image/x-icon"> 
+    <!-- Tail wind css -->
+    <style>
+         body
+         {
+           /* background-image: url("{% static 'img/green.svg' %}");  */
+        } 
+    </style>
+    <title>Home</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'index' %}">
+                <img src="{% static 'img/logo.jpg' %}" style="display: inline-block;" height="30px" width="35px">Farmer Webservices
+            </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'index' %}"><span class="fa fa-home fa-lg"></span> Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'crops' %}"><span class="fa fa-leaf fa-lg"></span> Crops</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'pestisides' %}"><span class="fa fa-bug fa-lg"></span> Pesticides</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'about' %}"><span class="fa fa-info-circle fa-lg"></span> About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'contact' %}"><span class="fa fa-id-card fa-lg"></span> Contact</a>
+            </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'signup' %}"><span class="fa fa-sign-in-alt fa-lg"></span> Sign Up</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'login' %}"><span class="fa fa-user-plus fa-lg"></span> Login</a>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+  
+  <header>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <!-- Slide One - Set the background image for this slide in the line below -->
+        <div class="carousel-item active" style="background-image: url('{% static 'img/bg.jpg' %}')">
+          <div class="carousel-caption d-none d-md-block">
+            <h2 class="display-4">Welcome</h2>
+            <p class="lead">Agriculture is our wisest pursuit, because it will in the end contribute most to real wealth, good morals, and happiness.</p>
+          </div>
+        </div>
+        <!-- Slide Two - Set the background image for this slide in the line below -->
+        <div class="carousel-item" style="background-image: url('{% static 'img/kal.jpg' %}')">
+          <div class="carousel-caption d-none d-md-block">
+            <h2 class="display-4"></h2>
+            <p class="lead">Farming is a profession of hope</p>
+          </div>
+        </div>
+        <!-- Slide Three - Set the background image for this slide in the line below -->
+        <div class="carousel-item" style="background-image: url('{% static 'img/item1.jpeg' %}')">
+          <div class="carousel-caption d-none d-md-block">
+            <h2 class="display-4"></h2>
+            <p class="lead">Farming looks mighty easy when your plow is a pencil, and you’re a thousand miles from the corn field.</p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+    </div>
+  </header>
+  
+  <!-- Page Content -->
+  <section class="py-5">
+    <div class="container">
+      <h1 class="display-4">Farmer Friendly Webservices</h1>
+      <p class="lead">It is a platform where you can find all the information and suggestions about farming.By Registering into our website you can get more details about technology involved in agriculture.</p>
+    </div>
+  </section>
+  <section class="py-5">
+      <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="{% static 'img/hi.jpg' %}" alt="">
+            </div>
+            <div class="col-md-8 mt-3">
+                <p class="lead">Agriculture plays a critical role in the entire life of a given economy. Agriculture is the backbone of the economic system of a given country. In addition to providing food and raw material, agriculture also provides employment opportunities to very large percentage of the population.The main source livelihood of many people is agriculture. Approximately 70 % of the people directly rely on agriculture as a mean of living. This high percentage in agriculture is as a result of none development of non-agricultural activities to absorb the fast-growing population. However, most people in developed countries do not engage in agriculture.</p>
+            </div>
+        </div>
+      </div>
+  </section>
+  <section class="py-5">
+    <div class="container">
+      <div class="row">
+          <div class="col-md-8 mt-1">
+              <p class="lead">Farmers hold the backbone of the agricultural system. As it is common knowledge that for a country to progress the gross domestic product should be reasonable, agriculture is one of the important parts. The agricultural system will only run if there are crops being grown and harvested, so this where farmers come in.Farmers are responsible for all crops and livestock that are needed for us to survive. Without food, the world would slowly die, and farmers work hard every day to keep plenty of crops and animal products in the market to keep that from happening.Indian farmers are the backbones of our nation’s economy as Indian economy is primarily Agriculture based country. Statics reveal that Indian agriculture is sector accounting for 18% of india’s Gross Demostic Product(GDP) and provide employment to nearly 50% of workers. </p>
+          </div>
+          <div class="col-md-4">
+            <img src="{% static 'img/farmer.jpg' %}" alt="">
+          </div>
+      </div>
+    </div>
+</section>
+<section class="py-5">
+    <div class="container">
+      <div class="row">
+          <div class="col-md-4">
+              <img src="{% static 'img/chemical.jpg' %}" alt="">
+          </div>
+          <div class="col-md-8 mt-2">
+              <p class="lead">All farmers use pesticides, including organic farmers. Whether from synthetic or natural sources, pesticides are used by all farmers. The difference is organic farmers can only use pesticides from natural sources. But both synthetic and natural pesticides have various levels of toxicity.Without the use of pesticides, more than half of our crops would be lost to pests and diseases. Between 26 and 40 percent of the world’s potential crop production is lost annually because of weeds, pests and diseases.2 Without crop protection, these losses could easily double.Currently, about 925 million people around the world – one in seven of us – are going hungry. To reduce hunger, we need to increase food productivity. Pesticides help farmers do that.</p>
+          </div>
+      </div>
+    </div>
+</section>
+<!-- ------------------ Footer-------------------- -->
+<footer class="footer-section">
+    <div class="container">
+        <div class="footer-cta pt-5 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="cta-text">
+                            <h4>Find us</h4>
+                            <span>AB1,IIIT Rkvalley Kadapa</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="fas fa-phone"></i>
+                        <div class="cta-text">
+                            <h4>Call us</h4>
+                            <span>9876543210 0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="far fa-envelope-open"></i>
+                        <div class="cta-text">
+                            <h4>Mail us</h4>
+                            <span>ffws@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-content pt-5 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <a href="index.html"><img src="{% static 'img/logo.jpg' %}" class="img-fluid" alt="logo"></a>
+                        </div>
+                        <div class="footer-text">
+                            <p>You wanna learn more about farming or you need any suggestion regarding farming let's join with us...It is a platform where you can find all the information and suggestion about farming</p>
+                        </div>
+                        <div class="footer-social-icon">
+                            <span>Follow us</span>
+                            <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                            <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+                            <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Useful Links</h3>
+                        </div>
+                        <ul>
+                            <li><a href="{% url 'index' %}">Home</a></li>
+                            <li><a href="{% url 'about' %}">about</a></li>
+                            <li><a href="{% url 'crops' %}">crops</a></li>
+                            <li><a href="{% url 'pestisides' %}">pesticides</a></li>
+                            <li><a href="{% url 'contact' %}">Contact</a></li>
+                            <li><a href="{% url 'about' %}">About us</a></li>
+                            <li><a href="#">Latest News</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Subscribe</h3>
+                        </div>
+                        <div class="footer-text mb-25">
+                            <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                        </div>
+                        <div class="subscribe-form">
+                            <form action="#">
+                                <input type="text" placeholder="Email Address">
+                                <button><i class="fab fa-telegram-plane"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                    <div class="copyright-text">
+                        <p>Copyright &copy; 2021, All Right Reserved <a href="#">@FFWS</a></p>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                    <div class="footer-menu">
+                        <ul>
+                            <li><a href="{% url 'index' %}">Home</a></li>
+                            <li><a href="#">Terms</a></li>
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Policy</a></li>
+                            <li><a href="{% url 'contact' %}">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+<script src="{% static 'jq/jquery.slim.min.js' %}"></script>
+<script src="{% static 'jq/popper.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.js' %}"></script>
+<script src="https://kit.fontawesome.com/99334bea18.js" crossorigin="anonymous"></script>
+<script src="{% static 'fa/fontawesome.js' %}"></script>
+<script src="{% static 'fa/fontawesome.min.js' %}"></script>
+<script src="{% static 'js/myjs.js' %}"></script>
+</body>
+</html>
